@@ -10,23 +10,30 @@
     html,body { margin:0; min-height:100%; }
     body { background:var(--paper); color:var(--ink); font-family:Georgia,"Times New Roman",serif; }
     main { width:min(94vw,1120px); margin:0 auto; padding:34px 20px 54px; text-align:center; }
-    .hero { display:block; width:100%; height:auto; margin:0 auto 28px; }
-    h1 { margin:0 0 16px; color:var(--green); font-size:clamp(2rem,5vw,3.4rem); font-weight:500; letter-spacing:.055em; }
-    .intro { max-width:820px; margin:0 auto; font-size:clamp(1.05rem,2vw,1.2rem); line-height:1.7; }
-    .alliances { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:900px; margin:32px auto; }
-    .alliance { padding:22px 14px; border:1px solid #c9b78e; background:rgba(255,255,255,.2); }
-    .tag { display:block; font:bold clamp(1.8rem,4vw,2.6rem) Arial,sans-serif; margin-bottom:7px; }
-    .blue .tag { color:var(--blue); } .green .tag { color:var(--green); } .red .tag { color:var(--crimson); }
-    .alliance strong { display:block; font-size:1.15rem; }
-    .alliance small { display:block; margin-top:5px; color:#766d5e; font:600 .82rem Arial,sans-serif; text-transform:uppercase; letter-spacing:.08em; }
-    .warning { max-width:820px; margin:32px auto; padding:24px 28px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); }
+    .hero { display:block; width:100%; height:auto; margin:0 auto 26px; }
+    h1 { margin:0 0 14px; color:var(--green); font-size:clamp(2rem,5vw,3.4rem); font-weight:500; letter-spacing:.055em; }
+    .intro { max-width:850px; margin:0 auto 30px; font-size:clamp(1.05rem,2vw,1.18rem); line-height:1.7; }
+    .columns { display:grid; grid-template-columns:1fr 1fr; gap:34px; max-width:1000px; margin:0 auto 34px; text-align:left; }
+    .panel { padding:26px 28px; border-top:2px solid var(--gold); border-bottom:1px solid #c9b78e; background:rgba(255,255,255,.18); }
+    .panel h2 { margin:0 0 8px; font-size:clamp(1.4rem,3vw,1.9rem); font-weight:500; }
+    .main h2 { color:var(--green); }
+    .farms h2 { color:var(--crimson); }
+    .sub { margin:0 0 20px; color:#766d5e; font:500 .92rem/1.5 Arial,sans-serif; }
+    .alliance { display:grid; grid-template-columns:72px 1fr; align-items:center; gap:14px; padding:12px 0; border-top:1px solid #d8c9aa; }
+    .alliance:first-of-type { border-top:0; }
+    .tag { font:bold 1.45rem Arial,sans-serif; }
+    .blue { color:var(--blue); } .green { color:var(--green); } .red { color:var(--crimson); }
+    .alliance strong { font-size:1.08rem; }
+    .kingdom { display:block; margin-top:3px; color:#766d5e; font:500 .78rem Arial,sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+    .tags { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+    .farmtag { min-width:82px; padding:14px 16px; border:2px solid var(--gold); background:#fff8e8; color:var(--crimson); text-align:center; font:bold 1.35rem Arial,sans-serif; letter-spacing:.05em; }
+    .farmnote { margin:20px 0 0; color:#766d5e; font:500 .88rem/1.55 Arial,sans-serif; }
+    .warning { max-width:850px; margin:0 auto; padding:24px 28px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); }
     .warning h2 { margin:0 0 10px; color:var(--crimson); font-size:1.5rem; }
     .warning p { margin:0; line-height:1.65; font-size:1.08rem; }
-    .protected { display:inline-block; margin-top:8px; padding:14px 24px; background:var(--green); color:#fff8e8; text-decoration:none; font:700 .95rem Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; border-radius:3px; }
-    .protected:hover,.protected:focus-visible { filter:brightness(1.12); }
     .back { display:block; width:fit-content; margin:34px auto 0; color:#756a57; text-decoration:none; font:600 .85rem Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; }
     .back:hover,.back:focus-visible { color:var(--crimson); }
-    @media(max-width:650px){ main{padding-left:12px;padding-right:12px}.alliances{grid-template-columns:1fr}.warning{padding-left:14px;padding-right:14px} }
+    @media(max-width:700px){ main{padding-left:12px;padding-right:12px}.columns{grid-template-columns:1fr;gap:20px}.panel{padding:22px 18px}.warning{padding-left:16px;padding-right:16px} }
   </style>
 </head>
 <body>
@@ -35,18 +42,34 @@
     <h1>Server 538 Truce</h1>
     <p class="intro">Server 538 has a truce between the largest alliances of the three kingdoms. We respect each other's interests and do not attack members of these alliances. Because this truce cannot be added as an in-game alliance, every player needs to recognize the protected alliance tags.</p>
 
-    <section class="alliances" aria-label="Main alliances protected by the truce">
-      <div class="alliance blue"><span class="tag">MW</span><strong>Milky Way</strong><small>Blue Kingdom</small></div>
-      <div class="alliance green"><span class="tag">CO</span><strong>Crimson Oak</strong><small>Green Kingdom</small></div>
-      <div class="alliance red"><span class="tag">NC</span><strong>Night City</strong><small>Red Kingdom</small></div>
+    <section class="columns">
+      <div class="panel main">
+        <h2>Main Alliances</h2>
+        <p class="sub">The three major alliances represented by the castles.</p>
+        <div class="alliance"><span class="tag blue">MW</span><div><strong>Milky Way</strong><span class="kingdom">Blue Kingdom</span></div></div>
+        <div class="alliance"><span class="tag green">CO</span><div><strong>Crimson Oak</strong><span class="kingdom">Green Kingdom</span></div></div>
+        <div class="alliance"><span class="tag red">NC</span><div><strong>Night City</strong><span class="kingdom">Red Kingdom</span></div></div>
+      </div>
+
+      <div class="panel farms">
+        <h2>Protected Farm Alliances</h2>
+        <p class="sub">Associated farms and sibling alliances represented by the farms.</p>
+        <div class="tags">
+          <span class="farmtag">FA</span>
+          <span class="farmtag">STG</span>
+          <span class="farmtag">TBL</span>
+          <span class="farmtag">CO2</span>
+          <span class="farmtag">DIVA</span>
+        </div>
+        <p class="farmnote">TBL remains a protected farm alliance tag even though the active TBL membership merged with TD to form Crimson Oak.</p>
+      </div>
     </section>
 
     <section class="warning">
       <h2>Before you attack</h2>
-      <p>Check the player's alliance tag. MW, CO and NC are protected by the Server 538 truce. Their associated farm and sibling alliances are protected as well. When in doubt, ask before attacking.</p>
+      <p>Check the player's alliance tag. MW, CO, NC and all protected farm tags listed above are covered by the Server 538 truce. When in doubt, ask before attacking.</p>
     </section>
 
-    <a class="protected" href="protected-alliances.html">View Protected Alliances &rarr;</a>
     <a class="back" href="wiki.html">&larr; Wiki Lobby</a>
   </main>
 </body>
