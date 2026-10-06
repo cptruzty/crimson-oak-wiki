@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules &amp; Consequences | Crimson Oak</title>
+  <style>
+    :root{--paper:#f2ead8;--ink:#243126;--green:#1f5a38;--crimson:#8f2926;--gold:#b88a35;}
+    *{box-sizing:border-box} html,body{margin:0;min-height:100%}
+    body{background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+    main{width:min(94vw,1120px);margin:0 auto;padding:34px 20px 54px;text-align:center}
+    .hero{display:block;width:100%;height:auto;margin:0 auto 28px}
+    h1{margin:0 0 14px;color:var(--green);font-size:clamp(2rem,5vw,3.4rem);font-weight:500;letter-spacing:.045em}
+    .intro{max-width:850px;margin:0 auto 32px;font-size:clamp(1.05rem,2vw,1.18rem);line-height:1.7}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:34px auto}
+    .step{padding:28px 22px;background:rgba(255,255,255,.22);border-top:3px solid var(--gold);border-bottom:1px solid #c9b78e}
+    .number{display:block;margin-bottom:10px;color:var(--gold);font:bold .85rem Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+    .step h2{margin:0 0 12px;color:var(--crimson);font-size:1.45rem;font-weight:500}
+    .step p{margin:0;line-height:1.6;font-size:1.03rem}
+    .equal{max-width:850px;margin:32px auto;padding:24px 28px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
+    .equal strong{display:block;color:var(--green);font-size:1.3rem;margin-bottom:8px}
+    .equal p{margin:0;line-height:1.65;font-size:1.08rem}
+    .back{display:block;width:fit-content;margin:34px auto 0;color:#756a57;text-decoration:none;font:600 .85rem Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    .back:hover,.back:focus-visible{color:var(--crimson)}
+    @media(max-width:700px){main{padding-left:12px;padding-right:12px}.steps{grid-template-columns:1fr}.equal{padding-left:16px;padding-right:16px}}
+  </style>
+</head>
+<body>
+  <main>
+    <img class="hero" src="justice.png" alt="Rules and consequences on Server 538">
+    <h1>Rules &amp; Consequences</h1>
+    <p class="intro">The rules and agreements on Server 538 apply equally to everyone. Their purpose is to protect cooperation between alliances and resolve violations fairly and consistently.</p>
+
+    <section class="steps" aria-label="Consequences for rule violations">
+      <div class="step">
+        <span class="number">First Offense</span>
+        <h2>Warning</h2>
+        <p>The player is informed of the violation and receives a warning.</p>
+      </div>
+      <div class="step">
+        <span class="number">Second Offense</span>
+        <h2>Demotion &amp; Restitution</h2>
+        <p>The player is demoted and must return or compensate for any resources taken as a result of the violation.</p>
+      </div>
+      <div class="step">
+        <span class="number">Third Offense</span>
+        <h2>Removal</h2>
+        <p>The player is removed from the alliance.</p>
+      </div>
+    </section>
+
+    <section class="equal">
+      <strong>The same process applies to everyone.</strong>
+      <p>Rank, alliance or player status does not change the consequences. The purpose is consistency, fairness and respect for the agreements that keep Server 538 working together.</p>
+    </section>
+
+    <a class="back" href="wiki.html">&larr; Wiki Lobby</a>
+  </main>
+</body>
+</html>
