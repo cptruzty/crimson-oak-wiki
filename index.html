@@ -6,16 +6,47 @@
   <title>Crimson Oak</title>
   <style>
     html, body { margin: 0; min-height: 100%; background: #0b0b0b; }
-    body { min-height: 100vh; display: grid; place-items: center; overflow: hidden; }
-    .entrance { display: block; width: min(92vw, 900px); line-height: 0; }
-    .entrance img { display: block; width: 100%; height: auto; transition: transform .35s ease, filter .35s ease; }
-    .entrance:hover img, .entrance:focus-visible img { transform: scale(1.015); filter: brightness(1.06); }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      color: #f3e5bd;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .home { text-align: center; padding: 32px 20px 40px; }
+    .emblem { display: block; width: min(62vw, 520px); margin: 0 auto 18px; line-height: 0; }
+    .emblem img { display: block; width: 100%; height: auto; transition: transform .35s ease, filter .35s ease; }
+    .emblem:hover img, .emblem:focus-visible img { transform: scale(1.025); filter: brightness(1.07); }
+    .alliance, .server { display: block; width: fit-content; margin-left: auto; margin-right: auto; text-decoration: none; }
+    .alliance {
+      margin-top: 6px;
+      color: #d9a83e;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .server {
+      margin-top: 10px;
+      color: #aaa;
+      font: 600 clamp(.95rem, 2vw, 1.2rem) Arial, sans-serif;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .alliance:hover, .alliance:focus-visible { color: #f2c75c; }
+    .server:hover, .server:focus-visible { color: #ddd; }
+    @media (max-height: 720px) {
+      .emblem { width: min(48vh, 430px); }
+      .home { padding-top: 18px; padding-bottom: 18px; }
+    }
   </style>
 </head>
 <body>
-  <!-- Crimson Oak entrance page -->
-  <a class="entrance" href="#" aria-label="Enter Crimson Oak">
-    <img src="Crimson_Oak.png" alt="Crimson Oak">
-  </a>
+  <main class="home">
+    <a class="emblem" href="wiki.html" aria-label="Enter the Crimson Oak wiki">
+      <img src="Crimson_Oak.png?v=2" alt="Crimson Oak emblem">
+    </a>
+    <a class="alliance" href="about.html">Crimson Oak</a>
+    <a class="server" href="server-538.html">Server 538</a>
+  </main>
 </body>
 </html>
